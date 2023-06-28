@@ -13,5 +13,6 @@ jobs:
   reusable-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Greet someone
-        run: echo "Hello ${{ inputs.who-to-greet }}"
+      - use: ./shared-action
+        with:
+          who-to-greet: ${{ inputs.who-to-greet }}
