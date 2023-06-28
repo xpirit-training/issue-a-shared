@@ -11,6 +11,6 @@ on:
 
 jobs:
   call-workflow:
-    uses: ./reusable-b.yml
+    uses: ./.github/workflows/reusable-b.yml
     with:
       who-to-greet: ${{ inputs.who-to-greet }}
