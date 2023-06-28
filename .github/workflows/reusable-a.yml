@@ -11,9 +11,6 @@ on:
 
 jobs:
   call-workflow:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "hello"
-#       - uses: ./reusable-b.yml
-#         with:
-#           who-to-greet: ${{ inputs.who-to-greet }}
+    uses: ./.github/workflows/reusable-b.yml
+    with:
+      who-to-greet: ${{ inputs.who-to-greet }}
